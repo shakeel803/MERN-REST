@@ -9,7 +9,7 @@ let customerRoute = require("./routes/customer")
 
 app.use(bodyParser.json())
 app.use((req,res,next)=>{
-    console.log(`${new Date().toString()} => ${req.originalUrl}`)
+    console.log(`${new Date().toString()} => ${req.method} ${req.originalUrl}`)
     next()
 })
 app.use(personRoute)
